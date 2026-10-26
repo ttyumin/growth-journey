@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>成长印记 · 人生记录集</title>
+  <meta name="description" content="一段一程，皆是风景 —— 个人成长记录集">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 登录门 -->
+  <div id="login-gate" class="login-gate">
+    <div class="login-card">
+      <div class="login-icon">🌱</div>
+      <h1>成长印记</h1>
+      <p class="login-sub">一段一程，皆是风景</p>
+      <form id="login-form" autocomplete="off">
+        <input type="text" id="login-user" placeholder="用户名" required>
+        <input type="password" id="login-pass" placeholder="密码" required>
+        <p id="login-error" class="login-error hidden">用户名或密码不正确</p>
+        <button type="submit">进 入</button>
+      </form>
+      <p class="login-tip">仅限家人与好友访问</p>
+    </div>
+  </div>
+
+  <!-- 主内容 -->
+  <main id="content" class="content hidden">
+
+    <!-- 头部 -->
+    <header class="hero">
+      <p class="hero-eyebrow">GROWTH JOURNEY</p>
+      <h1>成长印记</h1>
+      <p class="hero-sub">把走过的路、看过的风景、悟出的道理，<br>轻轻写下来，留给未来的自己。</p>
+      <div class="hero-scroll">向下展开 ↓</div>
+    </header>
+
+    <!-- 人生阶段时间线 -->
+    <section class="timeline" id="timeline">
+
+      <article class="stage">
+        <div class="stage-marker"><span>壹</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/01-childhood.jpg" alt="童年时光" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>童年时光<br><small>放入 images/01-childhood.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">0 — 12 岁</p>
+            <h2>童年时光</h2>
+            <p class="stage-quote">"小时候盼长大，长大后才懂那种无忧无虑再也不会回来。"</p>
+            <p>那是一段被阳光晒得暖洋洋的日子。巷子口的冰棍、夏夜的萤火虫、外婆蒲扇里摇出来的故事，构成了我对世界最初的信任。那时不懂什么叫幸福，现在回头看，幸福就是那种不用想明天的踏实。</p>
+            <p class="stage-note">心得：保持好奇，是童年教给我最珍贵的事。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-marker"><span>贰</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/02-school.jpg" alt="青葱岁月" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>青葱岁月<br><small>放入 images/02-school.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">12 — 18 岁</p>
+            <h2>青葱岁月</h2>
+            <p class="stage-quote">"青春是一场大雨，即使感冒了，也盼望着回头再淋一次。"</p>
+            <p>课桌上的刻度线、晚自习的灯光、考砸后偷偷的红眼眶，还有一群会为一道题吵到面红耳赤的朋友。这个年纪开始有了烦恼，也开始明白：努力不一定立刻有结果，但不努力一定没有。</p>
+            <p class="stage-note">心得：那些咬牙坚持的日子，后来都变成了铠甲。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-marker"><span>叁</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/03-college.jpg" alt="大学时代" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>大学时代<br><small>放入 images/03-college.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">18 — 22 岁</p>
+            <h2>大学时代</h2>
+            <p class="stage-quote">"大学教我的不是知识，而是如何独自面对生活。"</p>
+            <p>第一次离家千里，第一次自己安排一切。图书馆的清晨、宿舍的夜谈、社团里手忙脚乱的第一次活动。慢慢学会了为自己做决定，也学会了为决定负责。见过更大的世界，才知道自己有多渺小，也多自由。</p>
+            <p class="stage-note">心得：独立不是不依靠谁，而是有能力选择和谁同行。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-marker"><span>肆</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/04-career.jpg" alt="步入职场" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>步入职场<br><small>放入 images/04-career.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">22 — 30 岁</p>
+            <h2>步入职场</h2>
+            <p class="stage-quote">"生活的真相是：一边委屈，一边成长。"</p>
+            <p>领到第一份工资时的激动，加班到末班车上的疲惫，被否定后躲在楼梯间的几分钟。职场像一面镜子，照出能力的边界，也照出性格的棱角。磨掉一些天真，留下一些韧性。</p>
+            <p class="stage-note">心得：把每件小事做好，就是最大的野心。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-marker"><span>伍</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/05-family.jpg" alt="成家立业" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>成家立业<br><small>放入 images/05-family.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">30 岁以后</p>
+            <h2>成家立业</h2>
+            <p class="stage-quote">"所谓岁月静好，不过是有人和你一起扛。"</p>
+            <p>从"我"变成"我们"，责任变重了，心却安定了。柴米油盐里藏着最深的浪漫，孩子的笑声是最好的解药。也开始懂得父母当年的不易，学会在电话里多说几句"注意身体"。</p>
+            <p class="stage-note">心得：家不是讲理的地方，是讲爱的地方。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-marker"><span>陆</span></div>
+        <div class="stage-card">
+          <div class="stage-photo">
+            <img src="images/06-present.jpg" alt="当下与未来" loading="lazy"
+                 onerror="this.parentElement.classList.add('no-photo')">
+            <div class="photo-placeholder"><span>📷</span><p>当下与未来<br><small>放入 images/06-present.jpg</small></p></div>
+          </div>
+          <div class="stage-text">
+            <p class="stage-era">此时 · 此刻</p>
+            <h2>当下与未来</h2>
+            <p class="stage-quote">"人生没有白走的路，每一步都算数。"</p>
+            <p>走过半程才明白：成长不是变成别人期待的样子，而是慢慢活成自己喜欢的模样。往后的日子，愿继续读书、走路、爱人、被爱；愿眼里有光，心中有海，脚下有路。</p>
+            <p class="stage-note">心得：种一棵树最好的时间是十年前，其次是现在。</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- 寄语 -->
+    <section class="epilogue">
+      <p class="epilogue-mark">❝</p>
+      <p class="epilogue-text">愿我们历尽千帆，归来仍是少年。</p>
+      <p class="epilogue-sign">—— 写给自己的成长纪念册</p>
+    </section>
+
+    <footer class="footer">
+      <p>🌱 成长印记 · 记录每一程风景</p>
+      <button id="logout-btn" class="logout-btn">退出</button>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
