@@ -1,0 +1,357 @@
+/* ============ 成长印记 · 样式 ============ */
+
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --ink: #3d3a36;
+  --ink-soft: #7a746c;
+  --accent: #b0793f;
+  --accent-soft: #e8d9c5;
+  --line: #e8e2d8;
+  --green: #6b8e6f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.8;
+}
+
+.hidden { display: none !important; }
+
+/* ============ 登录门 ============ */
+
+.login-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(160deg, #f4ede2 0%, #faf7f2 50%, #e9efe7 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2.8rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(61, 58, 54, 0.12);
+  animation: rise 0.6s ease both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-icon { font-size: 2.6rem; }
+
+.login-card h1 {
+  font-size: 1.7rem;
+  letter-spacing: 0.35em;
+  margin: 0.6rem 0 0.3rem;
+  text-indent: 0.35em;
+}
+
+.login-sub {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.8rem;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background: #fdfcfa;
+  outline: none;
+  transition: border 0.2s;
+}
+
+#login-form input:focus { border-color: var(--accent); }
+
+#login-form button {
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 0.3rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+#login-form button:hover { opacity: 0.9; }
+#login-form button:active { transform: scale(0.98); }
+
+.login-error {
+  color: #b3432f;
+  font-size: 0.82rem;
+  margin: -0.3rem 0 0.6rem;
+}
+
+.login-tip {
+  margin-top: 1.4rem;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+}
+
+/* ============ 主体 ============ */
+
+.content { animation: fadein 0.8s ease both; }
+
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+/* 头部 */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(176, 121, 63, 0.08), transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(107, 142, 111, 0.1), transparent 50%);
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  font-weight: 600;
+}
+
+.hero-sub {
+  margin-top: 1.4rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.hero-scroll {
+  margin-top: 3.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* 时间线 */
+.timeline {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: calc(1.5rem + 20px);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-soft), var(--line));
+}
+
+@media (max-width: 640px) {
+  .timeline::before { display: none; }
+}
+
+.stage {
+  position: relative;
+  padding-left: 72px;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 640px) {
+  .stage { padding-left: 0; }
+}
+
+.stage-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--accent);
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .stage-marker {
+    position: static;
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    margin-bottom: -1.2rem;
+  }
+}
+
+.stage-card {
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(61, 58, 54, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(61, 58, 54, 0.13);
+}
+
+.stage-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  background: linear-gradient(135deg, #efe7da, #e2e9e0);
+  overflow: hidden;
+}
+
+.stage-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--ink-soft);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.photo-placeholder small { opacity: 0.7; font-size: 0.75rem; }
+.photo-placeholder span { font-size: 1.8rem; }
+
+.stage-photo:not(.no-photo) .photo-placeholder { display: none; }
+
+.stage-text { padding: 1.8rem 2rem 2rem; }
+
+.stage-era {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+}
+
+.stage-text h2 {
+  font-size: 1.45rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
+}
+
+.stage-quote {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.stage-note {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: #f6f1e8;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.9rem;
+  color: #6d5b41;
+}
+
+/* 寄语 */
+.epilogue {
+  text-align: center;
+  padding: 5rem 1.5rem 6rem;
+  background: linear-gradient(to bottom, transparent, rgba(176, 121, 63, 0.06));
+}
+
+.epilogue-mark {
+  font-size: 3rem;
+  color: var(--accent-soft);
+  line-height: 1;
+}
+
+.epilogue-text {
+  font-size: 1.4rem;
+  letter-spacing: 0.25em;
+  margin: 1rem 0 0.8rem;
+}
+
+.epilogue-sign {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem 2.5rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--line);
+}
+
+.logout-btn {
+  margin-top: 0.8rem;
+  padding: 0.45rem 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
